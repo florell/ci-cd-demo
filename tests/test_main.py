@@ -1,8 +1,10 @@
 """
 Unit tests for the application.
 """
+
 import pytest
-from app.main import app, calculate_sum, calculate_factorial
+
+from app.main import app, calculate_factorial, calculate_sum
 
 
 class TestCalculations:

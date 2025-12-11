@@ -1,6 +1,7 @@
 """
 Simple REST API application for CI/CD demonstration.
 """
+
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -15,7 +16,7 @@ def calculate_factorial(n: int) -> int:
     """Calculate factorial of a number."""
     if n < 0:
         raise ValueError("Factorial is not defined for negative numbers")
-    if n == 0 or n == 1:
+    if n in (0, 1):
         return 1
     result = 1
     for i in range(2, n + 1):
@@ -26,11 +27,13 @@ def calculate_factorial(n: int) -> int:
 @app.route("/")
 def home():
     """Home endpoint."""
-    return jsonify({
-        "message": "Welcome to CI/CD Demo API",
-        "version": "1.0.0",
-        "endpoints": ["/", "/health", "/api/sum", "/api/factorial"]
-    })
+    return jsonify(
+        {
+            "message": "Welcome to CI/CD Demo API",
+            "version": "1.0.0",
+            "endpoints": ["/", "/health", "/api/sum", "/api/factorial"],
+        }
+    )
 
 
 @app.route("/health")
