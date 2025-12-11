@@ -157,7 +157,7 @@ docker run -d -p 5000:5000 YOUR_USERNAME/ci-cd-demo:latest
 - CD Pipeline: `https://github.com/florell/ci-cd-demo/actions/workflows/cd.yml`
 
 ### GitLab CI/CD
-- Pipelines: `https://gitlab.com/florell/ci-cd-demo/-/pipelines`
+- Pipelines: `https://github.com/florell/ci-cd-demo/actions`
 
 ### Docker Hub
 - Registry: `https://hub.docker.com/r/florell/ci-cd-demo`
